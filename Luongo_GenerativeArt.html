@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        canvas {
+            border: 1px solid black;  
+            background-color: black;
+            
+        }
+
+        div {
+            position: absolute;
+            top: 50%;
+            width: 100%;
+            text-align: center;
+        }
+
+        
+    </style>
+</head>
+<body>
+    <canvas id="tutorial" width="1335" height="600"></canvas>
+    <div>
+        <input type="text" id="text" value="" />
+        <button onclick="draw()">Generate</button> <!-- {button and if you click on generate, function with circles start} -->
+    </div>
+
+    <script>
+
+        let z = 50; // variable to increment number of circles
+        function clearCanvas(ctx, canvas) {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+        }  // function so canvas refreshes everytime it starts 
+
+        function draw() {
+            const input = document.getElementById("text").value;
+            const i = parseInt(input); //variable to put in number ypu put into the container
+
+           
+            const canvas = document.getElementById("tutorial");
+            if (canvas.getContext) {
+                const ctx = canvas.getContext("2d");
+                clearCanvas(ctx, canvas); //clearing canvas after generating
+                //drawing white circles
+                ctx.strokeStyle = "white";
+
+                for (let j = 0; j < z ; j++) {
+                    ctx.beginPath();
+                    const x = 200;
+                    const y = 250;
+                    const radius = 10 + j * i; // Use input value for radius increment
+                    const startAngle = 0; // Starting point on circle
+                    const endAngle = Math.PI * 2; // End point on circle
+                    const counterclockwise = true; 
+
+                    ctx.arc(x, y, radius, startAngle, endAngle, counterclockwise);
+                    
+                    ctx.stroke();
+                }
+
+                for (let j = 0; j < 50; j++) {
+                    ctx.beginPath();
+                    const x = 400;
+                    const y = 250;
+                    const radius = 10 + j * i; 
+                    const startAngle = 0; 
+                    const endAngle = Math.PI * 2; 
+                    const counterclockwise = true; 
+
+                    ctx.arc(x, y, radius, startAngle, endAngle, counterclockwise);
+                    ctx.strokeStyle = 255; 
+                    ctx.stroke();
+                }
+
+                for (let j = 0; j < 20; j++) {
+                    ctx.beginPath();
+                    const x2 = 300;
+                    const y2 = 250;
+                    const radius2 = 20 + j * i; 
+                    const startAngle2 = 0; 
+                    const endAngle2 = Math.PI * 2; 
+                    const counterclockwise2 = true; 
+
+                    ctx.arc(x2, y2, radius2, startAngle2, endAngle2, counterclockwise2);
+                    ctx.stroke();
+                }
+
+                for (let j = 0; j < 80; j++) {
+                    ctx.beginPath();
+                    const x2 = 300;
+                    const y2 = 250;
+                    const radius2 = 10 + j * i; 
+                    const startAngle2 = 0; 
+                    const endAngle2 = Math.PI * 2; 
+                    const counterclockwise2 = true;
+
+                    ctx.arc(x2, y2, radius2, startAngle2, endAngle2, counterclockwise2);
+                    ctx.stroke();
+                }
+
+                for (let j = 0; j < z; j++) {
+                    ctx.beginPath();
+                    const x2 = 100;
+                    const y2 = 150;
+                    const radius2 = j * i; 
+                    const startAngle2 = 0; 
+                    const endAngle2 = Math.PI * 2; 
+                    const counterclockwise2 = true; 
+
+                    ctx.arc(x2, y2, radius2, startAngle2, endAngle2, counterclockwise2);
+                    ctx.stroke();
+                }
+
+                for (let j = 0; j < 70; j++) {
+                    ctx.beginPath();
+                    const x2 = 700;
+                    const y2 = 300;
+                    const radius2 = j * i; 
+                    const startAngle2 = 0; 
+                    const endAngle2 = Math.PI * 2; 
+                    const counterclockwise2 = true; 
+                    ctx.arc(x2, y2, radius2, startAngle2, endAngle2, counterclockwise2);
+                    ctx.stroke();
+                }
+
+                for (let j = 0; j < 100; j++) {
+                    ctx.beginPath();
+                    const x2 = 1200;
+                    const y2 = 600;
+                    const radius2 = j * i; 
+                    const startAngle2 = 0; 
+                    const endAngle2 = Math.PI * 2; 
+                    const counterclockwise2 = true; 
+                    ctx.arc(x2, y2, radius2, startAngle2, endAngle2, counterclockwise2);
+                    ctx.stroke();
+                }
+
+                for (let j = 0; j < 120; j++) {
+                    ctx.beginPath();
+                    const x2 = 1100;
+                    const y2 = 100;
+                    const radius2 = j * i; 
+                    const startAngle2 = 0; 
+                    const endAngle2 = Math.PI * 2; 
+                    const counterclockwise2 = true; 
+
+                    ctx.arc(x2, y2, radius2, startAngle2, endAngle2, counterclockwise2);
+                    ctx.stroke();
+                }
+
+                
+                for (let j = 0; j < z; j++) {
+                    ctx.beginPath();
+                    const x2 = 1100;
+                    const y2 = 100;
+                    const radius2 = j * i; 
+                    const startAngle2 = 0; 
+                    const endAngle2 = Math.PI * 2; 
+                    const counterclockwise2 = true; 
+
+                    ctx.arc(x2, y2, radius2, startAngle2, endAngle2, counterclockwise2);
+                    ctx.stroke();
+                }
+                for (let j = 0; j < z; j++) {
+                    ctx.beginPath();
+                    const x2 = 1000;
+                    const y2 = 450;
+                    const radius2 = j * i; 
+                    const startAngle2 = 0; 
+                    const endAngle2 = Math.PI * 2; 
+                    const counterclockwise2 = true; 
+
+                    ctx.arc(x2, y2, radius2, startAngle2, endAngle2, counterclockwise2);
+                    ctx.stroke();
+                }
+            }
+        }
+
+        document.getElementById("tutorial").addEventListener("click", function() {
+            z++;
+            draw(); // Redraw circles with updated z value if you click the radius is getting bigger
+        });
+    </script>
+</body>
+</html>
